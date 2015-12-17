@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <fx>
+
+    <engine>
+      <name>engine</name>
+      <mode>looped</mode>
+      <path>Aircraft/AN-TWQ-1-Avenger/Sounds/Humvee_idle.wav</path>
+      <condition>
+        <not>
+          <equals>
+            <property>engines/engine/rpm</property>
+            <value>120</value>
+          </equals>
+        </not>
+      </condition>
+      <volume>
+        <factor>9</factor>
+      </volume>
+      <reference-dist>250</reference-dist>
+      <max-dist>2000</max-dist>
+    </engine>
+        <click>
+         <name>Landing Light On</name>
+         <path>Sounds/click.wav</path>
+         <condition>
+          <property>controls/switches/landing-light</property>
+         </condition>
+         <volume>
+          <factor>1.0</factor>
+         </volume>
+        </click>
+        <click>
+         <name>Landing Light Off</name>
+         <path>Sounds/click.wav</path>
+         <condition>
+          <not>
+           <property>controls/switches/landing-light</property>
+          </not>
+         </condition>
+         <volume>
+          <factor>1.0</factor>
+         </volume>
+        </click>
+        <guns>
+         <name>gunfire</name>
+         <mode>looped</mode>
+         <path>Aircraft/AN-TWQ-1-Avenger/Sounds/gunfire.wav</path>
+         <condition>
+          <property>controls/armament/trigger</property>
+          <property>ai/submodels/submodel/count</property>
+         </condition>
+         <volume>
+          <factor>1.2</factor>
+          <max>1.0</max>
+         </volume>
+         <reference-dist>100</reference-dist>
+         <max-dist>1000</max-dist>
+        </guns>
+        <guns>
+         <name>Rockets</name>
+         <path>Aircraft/AN-TWQ-1-Avenger/Sounds/Missile.wav</path>
+         <condition>
+          <or>
+           <property>controls/armament/rocket1-fire</property>
+           <property>controls/armament/rocket2-fire</property>
+          </or>
+         </condition>
+        </guns>
+        <contact>
+            <name>ground contact</name>
+            <mode>once</mode>
+            <path>Aircraft/UH-1/Sounds/TC1.wav</path>
+            <condition>
+                <property>gear/gear[0]/wow</property>
+                <property>gear/gear[1]/wow</property>
+                <property>gear/gear[2]/wow</property>
+                <property>gear/gear[3]/wow</property>
+            </condition>
+            <volume>
+                <factor>0.8</factor>
+            </volume>
+            <pitch>
+                <factor>0.01</factor>
+            </pitch>
+            <reference-dist>5.0</reference-dist>
+            <max-dist>10.0</max-dist>
+        </contact>
+        <wind>
+            <name>wind</name>
+            <mode>looped</mode>
+            <path>Sounds/wind.wav</path>
+            <condition>
+                <and>
+                    <property>velocities/airspeed-kt</property>
+                    <not>
+                        <property>sim/crashed</property>
+                    </not>
+                </and>
+            </condition>
+            <volume>
+                <property>velocities/airspeed-kt</property>
+                <factor>0.0015</factor>
+                <min>0.00</min>
+                <max>0.25</max>
+            </volume>
+            <pitch>
+                <property>velocities/airspeed-kt</property>
+                <factor>0.01</factor>
+                <offset>1.25</offset>
+            </pitch>
+            <reference-dist>10.0</reference-dist>
+            <max-dist>20.0</max-dist>
+        </wind>
+        <crash>
+            <name>intense ground contact</name>
+            <mode>once</mode>
+            <path>Sounds/crash.wav</path>
+            <property>sim/crashed</property>
+            <volume>
+                <factor>1</factor>
+            </volume>
+            <pitch>
+                <factor>0.1</factor>
+            </pitch>
+            <reference-dist>500</reference-dist>
+            <max-dist>1000</max-dist>
+        </crash>
+
+    </fx>
+
+</PropertyList>

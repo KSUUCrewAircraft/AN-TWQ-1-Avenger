@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+
+
+
+ <PropertyList>
+
+ 
+  <path>Avenger-launcher.ac</path>
+ 
+  <animation>
+    <type>rotate</type> 
+    <property>controls/flight/elevator</property>
+    <factor>-70</factor>  
+    <center>
+     <x-m>0.0</x-m> 
+     <y-m>0.0</y-m> 
+     <z-m>0.0</z-m> 
+    </center>
+    <axis>
+     <x>0.0</x>
+     <y>-0.5</y>
+     <z>0.0</z>
+    </axis>  
+  </animation>
+  <model>
+   <path>Aircraft/AN-TWQ-1-Avenger/Models/Avenger-guns/fire.xml</path>
+   <offsets>
+    <x-m> -1.00 </x-m>
+    <y-m> 1.10 </y-m>
+    <z-m> -0.40 </z-m>
+    <roll-deg> 0 </roll-deg>
+    <pitch-deg> 180 </pitch-deg>
+    <heading-deg> 0 </heading-deg>
+   </offsets>
+  </model>
+  <model>
+   <path>Aircraft/AN-TWQ-1-Avenger/Models/rocket/rocket-submodels.xml</path>
+   <offsets>
+    <x-m> -1.00 </x-m>
+    <y-m> 0.00 </y-m>
+    <z-m> -0.40 </z-m>
+    <roll-deg> 0 </roll-deg>
+    <pitch-deg> 180 </pitch-deg>
+    <heading-deg> 0 </heading-deg>
+   </offsets>
+  </model>
+</PropertyList>

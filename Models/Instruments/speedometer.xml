@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	
+	<!--back-->
+	<!--right -->
+	<!--up -->
+		
+
+    <path>speedometer.ac</path>
+ <animation>
+  <type>rotate</type>
+  <object-name>needle</object-name>
+  <property>velocities/groundspeed-kt</property>
+  <factor>-4.23</factor>
+  <center>
+   <x-m>0.0</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.0</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>  <animation>
+  <type>material</type>
+  <object-name>face</object-name>
+  <object-name>needle</object-name>
+  <object-name>digit.1</object-name>
+  <object-name>digit.2</object-name>
+  <object-name>digit.3</object-name>
+  <object-name>digit.4</object-name>
+  <object-name>digit.5</object-name>
+  <object-name>digit.6</object-name>
+  <emission>
+   <red>0.5</red>
+   <green>0.5</green>
+   <blue>0.5</blue>
+   <property>controls/switches/landing-light</property>
+  </emission>
+ </animation>
+
+
+</PropertyList>

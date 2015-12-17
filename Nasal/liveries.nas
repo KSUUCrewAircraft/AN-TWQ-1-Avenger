@@ -1,0 +1,1 @@
+aircraft.livery.init("Aircraft/AN-TWQ-1-Avenger/Models/Liveries");

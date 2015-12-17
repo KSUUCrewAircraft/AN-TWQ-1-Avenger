@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+ 
+  <sim>
+
+  
+    <description>Humvee HMMWV M1113</description>
+  
+    <author>Martien van der Plas, Alexis Bory (3d model)</author>
+  
+    <status>experimental</status>
+  
+    <aircraft-version>0.1</aircraft-version>
+
+  
+    <flight-model>jsb</flight-model>
+  
+    <aero>Humvee_M1113</aero>
+
+  
+    <presets>
+   
+      <onground>true</onground>
+  
+    </presets>
+
+  
+    <startup>
+   
+      <splash-texture>Aircraft/AN-TWQ-1-Avenger/Humvee_M1113-splash.jpg</splash-texture>
+  
+    </startup>
+ 
+    <sound>
+   
+      <path>Aircraft/AN-TWQ-1-Avenger/Sounds/Humvee-sound.xml</path>
+  
+    </sound>
+    <model>
+   
+      <path>Aircraft/AN-TWQ-1-Avenger/Models/Humvee_M1113.xml</path>
+
+        <livery>
+         <file type="string">default</file>
+        </livery>
+    </model>
+
+        
+   
+    <model>
+   
+      <path>Aircraft/AN-TWQ-1-Avenger/Models/Humvee_M1113.xml</path>
+  
+    </model>
+
+
+    <multiplay>
+     <chat_display>1</chat_display>
+     <generic>
+      <int type="int" n="0"> 0 </int>
+      <!-- 0 immat -->
+      <int type="int" n="1"> 0 </int>
+      <!-- 1 immat -->
+      <int type="int" n="2"> 0 </int>
+      <!-- 2 immat -->
+      <int type="int" n="3"> 0 </int>
+      <!-- 3 immat -->
+      <int type="int" n="4"> 0 </int>
+      <!-- 4 immat -->
+      <int type="int" n="5"> 0 </int>
+      <!-- 5 immat -->
+      <int type="bool" n="6" alias="/smoke/active"> 0 </int>
+      <!-- 6 start smoke -->
+      <int type="int" n="7" alias="smoke/particlepersec"> 50 </int>
+      <!-- 7 particlepersec -->
+      <int type="int" n="10" alias="controls/armament/trigger">0</int>
+      <!-- 10 reserved for bombable mode -->
+      <float n="0" alias="/instrumentation/doors/crew/position-norm"/><float n="1" alias="/instrumentation/doors/passenger/position-norm"/><float n="2" alias="/position/gear-agl-m"> 0 </float>
+      <!-- altitude for MP shadow -->
+      <float n="3" alias="/smoke/colors/knob-red">1</float>
+      <!-- 3 smoke mixer red setting -->
+      <float n="4" alias="/smoke/colors/knob-green">1</float>
+      <!-- 4 smoke mixer green setting -->
+      <float n="5" alias="/smoke/colors/knob-blue">1</float>
+      <!-- 5 smoke mixer blue setting -->
+      <string type="string" n="9"/>
+      <!-- string[9] reserved for bombable mode -->
+     </generic>
+    </multiplay> 
+
+    <menubar>
+    <default>
+     <menu n="10">
+     <label>Humvee M1113</label>
+     <enabled type="bool">true</enabled>
+     <item>
+      <label>Select Livery</label>
+      <binding>
+       <command>nasal</command>
+       <script>aircraft.livery.dialog.toggle()</script>
+      </binding>
+     </item>
+     </menu>
+    </default>
+    </menubar>  
+    <systems>
+
+   
+      <electrical>
+    
+        <path/>
+   
+      </electrical>
+
+   
+      <static>
+   
+      </static>
+
+  
+    </systems>
+  
+    <instrumentation>
+   
+      <path/>
+ 
+    </instrumentation>
+
+  
+    <view n="0">
+   <internal archive="y">true</internal>
+   
+      <config>
+    
+        <!-- x/y/z == right/up/back -->
+    
+        <x-offset-m archive="y">-0.7</x-offset-m>
+    
+        <y-offset-m archive="y"> 1.9</y-offset-m>
+    
+        <z-offset-m archive="y">-0.0</z-offset-m>
+    
+        <pitch-offset-deg>-5</pitch-offset-deg>
+    
+        <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+   
+      </config>
+  
+    </view>
+
+
+    <view n="500">
+     <name>Passenger</name>
+     <type>lookfrom</type>
+     <internal archive="y">true</internal>
+     <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">55</default-field-of-view-deg>
+      <pitch-offset-deg>-8.0</pitch-offset-deg>
+      <heading-offset-deg type="double">0</heading-offset-deg>
+      <!-- parallel to the panel -->
+      <x-offset-m archive="y"> 0.7 </x-offset-m>
+      <!-- Left/Right -->
+      <y-offset-m archive="y"> 1.9 </y-offset-m>
+      <!-- Up/Down -->
+      <z-offset-m archive="y"> 0.0 </z-offset-m>
+      <!-- Fdw/Back -->
+     </config>
+    </view>  
+    <chase-distance-m type="double" archive="y">-15.0</chase-distance-m>
+
+  
+    <multiplay>
+   
+      <generic>
+    
+        <!-- Beam trigger -->
+    
+        <int n="0" type="int">0</int>
+   
+      </generic>
+  
+    </multiplay>
+
+  
+    <help>
+   
+      <key>
+    
+        <name>b</name>
+    
+        <desc>Brakes.</desc>
+   
+      </key>
+   
+      <key>
+    
+        <name>Page Up/Page Down</name>
+    
+        <desc>Accelerator.</desc>
+   
+      </key>
+   
+      <key>
+    
+        <name>shift + R</name>
+    
+        <desc>Toggle reverse.</desc>
+  
+      </key>
+   
+      <key>
+   
+        <name>shift + B</name>
+    
+        <desc>Toggle parking brake.</desc>
+   
+      </key>
+      <key>
+   
+        <name>l</name>
+    
+        <desc>Toggle lights.</desc>
+   
+      </key>
+
+     </help>
+
+ 
+    </sim>
+
+ 
+    <input>
+  
+      <keyboard>
+
+         <key n="108">
+          <name>l</name>
+          <desc>headlights</desc>
+          <binding>
+           <command>property-toggle</command>
+           <property>controls/switches/landing-light</property>
+          </binding>
+         </key>
+         <key n="82">
+   
+         <name>R</name>
+    
+         <desc>Toggle reverse gear.</desc>
+    
+         <binding>
+     
+           <command>nasal</command>
+     
+           <script>
+      var dir = "/fdm/jsbsim/propulsion/engine/yaw-angle-rad";
+      setprop(dir, (getprop(dir) == 0) ? 3.14159265 : 0.0);
+     </script>
+   
+         </binding>
+
+         </key>
+      </keyboard>
+
+      <nasal>
+       <guns>
+        <file>Aircraft/AN-TWQ-1-Avenger/Nasal/liveries.nas</file>
+       </guns>
+      </nasal> 
+    </input>
+
+
+</PropertyList>

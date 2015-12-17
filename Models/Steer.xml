@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+
+
+
+ <PropertyList>
+
+ 
+  <path>Steer.ac</path>
+ 
+  <animation>
+    <type>rotate</type> 
+    <property>controls/flight/aileron</property> 
+    <factor>-100</factor> 
+    <center>
+     <x-m>0.0</x-m> 
+     <y-m>0.0</y-m> 
+     <z-m>0.0</z-m> 
+    </center> 
+    <axis> 
+     <x1-m>1.185</x1-m> 
+     <y1-m>-0.331</y1-m>
+     <z1-m>0.713</z1-m>
+     <x2-m>1.750</x2-m>
+     <y2-m>-0.331</y2-m>
+     <z2-m>1.303</z2-m> 
+    </axis> 
+  </animation>
+</PropertyList>

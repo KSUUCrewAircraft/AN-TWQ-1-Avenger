@@ -1,0 +1,450 @@
+<?xml version="1.0"?>
+
+
+<PropertyList include="AN-TWQ-1-Avenger-bombableinclude.xml">
+
+ 
+<model>
+ <path>AN-TWQ-1-Avenger.ac</path>
+ 
+ <offsets> 
+  <x-m> 0.0 </x-m> 
+  <y-m> 0.0 </y-m> 
+  <z-m> 0.25 </z-m> 
+  <roll-deg> 0 </roll-deg> 
+  <pitch-deg> 0 </pitch-deg> 
+  <heading-deg> 0 </heading-deg> 
+ </offsets> 
+</model> 
+
+<nasal>
+  <load>
+   var livery_update = aircraft.livery_update.new("Aircraft/AN-TWQ-1-Avenger/Models/Liveries", 10);
+  </load>
+ 
+  <unload>
+   livery_update.stop();
+  </unload>
+</nasal>
+
+<animation>
+  <type>material</type>
+   <object-name>box</object-name>
+   <object-name>box.001</object-name>
+   <object-name>box.002</object-name>
+   <object-name>box.003</object-name>
+   <object-name>box.004</object-name>
+   <object-name>box.005</object-name>
+   <object-name>box.006</object-name>
+   <object-name>box.007</object-name>
+   <object-name>box.008</object-name>
+   <object-name>humvee-pickup</object-name>
+   <object-name>humvee-pickup.001</object-name>
+   <object-name>rect</object-name>
+   <object-name>block</object-name>
+   <object-name>cylinder</object-name>
+   <property-base>sim/model/livery</property-base>
+   <texture-prop>texture</texture-prop>
+   <texture>humvee-pickup-odrab-lowres.png</texture>
+</animation>
+
+ <!-- x/y/z == back/right/up -->
+
+ 
+
+ 
+ 
+
+ <animation>
+  
+    <type>range</type>
+  
+    <min-m>0</min-m>
+  
+    <max-m>5000</max-m>
+ 
+  </animation> 
+  <model> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/BWL.xml</path> 
+    <offsets>
+      <x-m> 2.05 </x-m> 
+      <y-m> -0.80 </y-m> 
+      <z-m> 0.60 </z-m> 
+      <roll-deg> 0 </roll-deg> 
+      <pitch-deg> 0 </pitch-deg> 
+      <heading-deg> 180 </heading-deg> 
+    </offsets> 
+  </model> 
+  <model> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/BWR.xml</path> 
+    <offsets> 
+      <x-m> 2.05 </x-m>
+      <y-m> 0.80 </y-m>
+      <z-m> 0.60 </z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 180 </heading-deg> 
+    </offsets> 
+  </model> 
+  
+
+<model>
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/FWR.xml</path> 
+    <offsets>
+      <x-m> -1.35</x-m> 
+      <y-m> 0.80 </y-m> 
+      <z-m> 0.60 </z-m> 
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg> 
+      <heading-deg> 180 </heading-deg> 
+    </offsets> 
+  </model> 
+  
+
+<model> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/FWL.xml</path>
+    <offsets> 
+      <x-m> -1.35</x-m> 
+      <y-m> -0.80 </y-m>
+      <z-m> 0.60 </z-m> 
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 180 </heading-deg> 
+    </offsets> 
+  </model> 
+  
+
+<model> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Instruments/speedometer.xml</path>
+    <offsets> 
+      <x-m> -0.335</x-m> 
+      <y-m> -0.82 </y-m>
+      <z-m> 1.40 </z-m> 
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> -25.0 </pitch-deg>
+      <heading-deg> 0 </heading-deg> 
+    </offsets> 
+  </model>
+  
+
+<model> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Instruments/fuelgauge.xml</path>
+    <offsets> 
+      <x-m> -0.335</x-m> 
+      <y-m> -0.7 </y-m>
+      <z-m> 1.40 </z-m> 
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> -25.0 </pitch-deg>
+      <heading-deg> 0 </heading-deg> 
+    </offsets> 
+  </model>
+  
+
+<model> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Instruments/temp130.xml</path>
+    <offsets> 
+      <x-m> -0.335</x-m> 
+      <y-m> -0.6 </y-m>
+      <z-m> 1.40 </z-m> 
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> -25.0 </pitch-deg>
+      <heading-deg> 0 </heading-deg> 
+    </offsets> 
+  </model>
+  
+
+<model> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Instruments/frw.xml</path>
+    <offsets> 
+      <x-m> -0.40</x-m> 
+      <y-m> 0.0 </y-m>
+      <z-m> 2.00 </z-m> 
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> -15 </heading-deg> 
+    </offsets> 
+  </model>
+  
+
+<model> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Steer.xml</path>
+    <offsets> 
+      <x-m> -0.35</x-m> 
+      <y-m> -0.75 </y-m>
+      <z-m> 1.35 </z-m> 
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg> 
+    </offsets> 
+  </model>
+  <model> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/AN-TWQ-1-Avenger-launcher.xml</path> 
+    <offsets> 
+      <x-m> 2.00 </x-m>
+      <y-m> 0.00 </y-m>
+      <z-m> 1.45 </z-m>
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg> 
+    </offsets> 
+  </model>
+  
+
+<model>
+    <name>HeadlightL</name> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Light/light-cone.xml</path>
+    <offsets> 
+      <x-m> -1.55</x-m> 
+      <y-m> -0.55 </y-m>
+      <z-m> 1.18 </z-m> 
+      <roll-deg>  0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> 7 </heading-deg> 
+    </offsets> 
+  </model>
+  
+
+<model>
+    <name>HeadlightR</name> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Light/light-cone.xml</path>
+    <offsets> 
+      <x-m> -1.55</x-m> 
+      <y-m> 0.50 </y-m>
+      <z-m> 1.18  </z-m> 
+      <roll-deg>  0 </roll-deg>
+      <pitch-deg> -10 </pitch-deg>
+      <heading-deg> -7 </heading-deg> 
+    </offsets> 
+  </model>
+  
+
+<model>
+    <name>WhitelightL</name> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Light/White/White.xml</path>
+    <offsets> 
+      <x-m> -1.725</x-m> 
+      <y-m> -0.55 </y-m>
+      <z-m> 1.18 </z-m> 
+      <roll-deg>  0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg> 
+    </offsets> 
+  </model>
+  
+
+<model>
+    <name>WhitelightR</name> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Light/White/White.xml</path>
+    <offsets> 
+      <x-m> -1.725</x-m> 
+      <y-m> 0.50 </y-m>
+      <z-m> 1.18  </z-m> 
+      <roll-deg>  0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg> 
+    </offsets> 
+  </model>
+  
+
+<model>
+    <name>TaillightL</name> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Light/Rflash.xml</path>
+    <offsets> 
+      <x-m> 2.85</x-m> 
+      <y-m> -0.90 </y-m>
+      <z-m> 1.1  </z-m> 
+      <roll-deg>  0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 180 </heading-deg> 
+    </offsets> 
+  </model>
+  
+
+<model>
+    <name>TaillightR</name> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Light/Rflash.xml</path>
+    <offsets> 
+      <x-m> 2.85</x-m> 
+      <y-m> 0.90 </y-m>
+      <z-m> 1.1  </z-m> 
+      <roll-deg>  0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 180 </heading-deg> 
+    </offsets> 
+  </model>
+  
+
+<model>
+    <name>Orange1</name> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Light/Orange/Orange.xml</path>
+    <offsets> 
+      <x-m> -1.715</x-m> 
+      <y-m> 0.90 </y-m>
+      <z-m> 1.22 </z-m> 
+      <roll-deg>  0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg> 
+    </offsets>
+  </model> 
+  
+
+<model>
+    <name>Orange2</name> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Light/Orange/Orange.xml</path>
+    <offsets> 
+      <x-m> -1.715</x-m> 
+      <y-m> -0.90 </y-m>
+      <z-m> 1.22 </z-m> 
+      <roll-deg>  0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg> 
+    </offsets>
+  </model>
+  
+
+<model>
+    <name>Orange2</name> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Light/Orange/Orange.xml</path>
+    <offsets> 
+      <x-m> -1.65</x-m> 
+      <y-m> -1.05 </y-m>
+      <z-m> 1.25 </z-m> 
+      <roll-deg>  0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 90 </heading-deg> 
+    </offsets>
+  </model>
+  
+
+<model>
+    <name>Orange1</name> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Light/Orange/Orange.xml</path>
+    <offsets> 
+      <x-m> -1.65</x-m> 
+      <y-m> 1.05 </y-m>
+      <z-m> 1.25 </z-m> 
+      <roll-deg>  0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> -90 </heading-deg> 
+    </offsets>
+  </model>
+  
+
+<model>
+    <name>Orange2</name> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Light/Orange/Orange.xml</path>
+    <offsets> 
+      <x-m> 2.75</x-m> 
+      <y-m> -1.10 </y-m>
+      <z-m> 1.25 </z-m> 
+      <roll-deg>  0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 90 </heading-deg> 
+    </offsets>
+  </model>
+  
+
+<model>
+    <name>Orange1</name> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Light/Orange/Orange.xml</path>
+    <offsets> 
+      <x-m> 2.75</x-m> 
+      <y-m> 1.10 </y-m>
+      <z-m> 1.25 </z-m> 
+      <roll-deg>  0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> -90 </heading-deg> 
+    </offsets>
+  </model>
+  
+
+<model>
+    <name>Orange3</name> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Light/Orange/Orange.xml</path>
+    <offsets> 
+      <x-m> -0.44</x-m> 
+      <y-m> 0.0 </y-m>
+      <z-m> 2.00 </z-m> 
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg> 
+    </offsets> 
+  </model>
+  
+
+<model>
+    <name>Orange3</name> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Light/Orange/Orange.xml</path>
+    <offsets> 
+      <x-m> -0.435</x-m> 
+      <y-m> 0.30 </y-m>
+      <z-m> 2.00 </z-m> 
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg> 
+    </offsets> 
+  </model>
+  
+
+<model>
+    <name>Orange3</name> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Light/Orange/Orange.xml</path>
+    <offsets> 
+      <x-m> -0.435</x-m> 
+      <y-m> -0.30</y-m>
+      <z-m> 2.00 </z-m> 
+      <roll-deg> 0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg> 
+    </offsets> 
+  </model>
+  <animation>
+    <type>select</type>
+      <object-name>HeadlightL</object-name>
+      <object-name>HeadlightR</object-name>
+      <object-name>WhitelightL</object-name>
+      <object-name>WhitelightR</object-name>
+      <object-name>TaillightL</object-name>
+      <object-name>TaillightR</object-name>
+      <object-name>Orange1</object-name>
+      <object-name>Orange2</object-name>
+      <object-name>Orange3</object-name>
+       <condition>
+         <equals>
+           <property>controls/switches/landing-light</property>
+           <value> 1 </value>
+         </equals>
+       </condition>
+  </animation>
+  
+
+<model> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Light/divers/landing-lights.xml</path>
+    <offsets> 
+      <x-m> -0.333</x-m> 
+      <y-m> -0.5 </y-m>
+      <z-m> 1.40 </z-m> 
+      <roll-deg>  0 </roll-deg>
+      <pitch-deg> -25.0 </pitch-deg>
+      <heading-deg> 0 </heading-deg> 
+    </offsets> 
+  </model>
+  
+
+<model> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Driver/pilot.xml</path>
+    <offsets> 
+      <x-m> 0.2</x-m> 
+      <y-m> -0.7 </y-m>
+      <z-m> 1.40 </z-m> 
+      <roll-deg>  0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg> 
+    </offsets> 
+  </model>
+</PropertyList>
+
+
+
+
+

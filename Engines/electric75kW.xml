@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!--
+  Models an electric engine
+-->
+
+<electric_engine name="electric">
+  <power unit="WATTS">  75000.0 </power>
+</electric_engine>

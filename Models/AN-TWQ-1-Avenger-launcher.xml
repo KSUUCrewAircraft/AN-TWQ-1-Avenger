@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+
+
+
+ <PropertyList>
+
+ 
+  <path>AN-TWQ-1-Avenger-launcher.ac</path>
+ 
+  <animation>
+    <type>rotate</type> 
+    <property>controls/flight/rudder</property>
+    <factor>-360</factor>  
+    <center>
+     <x-m>0.0</x-m> 
+     <y-m>0.0</y-m> 
+     <z-m>0.0</z-m> 
+    </center>
+    <axis>
+     <x1-m>0.9998</x1-m>
+     <y1-m>0</y1-m>
+     <z1-m>6.0231</z1-m>
+     <x2-m>1.1375</x2-m>
+     <y2-m>0</y2-m>
+     <z2-m>-1.2899</z2-m>
+    </axis>  
+  </animation>
+  <model>
+  <path>Aircraft/AN-TWQ-1-Avenger/Models/Avenger-guns/Avenger-launcher.xml</path>
+  <offsets>
+   <x-m> 0.25 </x-m>
+   <y-m> 0.00 </y-m>
+   <z-m> 1.20 </z-m>
+   <roll-deg> 0 </roll-deg>
+   <pitch-deg> 0 </pitch-deg>
+   <heading-deg> 0 </heading-deg>
+  </offsets>
+  </model>
+  
+
+<model> 
+    <path>Aircraft/AN-TWQ-1-Avenger/Models/Driver/pilot.xml</path>
+    <offsets> 
+      <x-m> 0.0</x-m> 
+      <y-m> 0.0 </y-m>
+      <z-m> 0.7 </z-m> 
+      <roll-deg>  0 </roll-deg>
+      <pitch-deg> 0 </pitch-deg>
+      <heading-deg> 0 </heading-deg> 
+    </offsets> 
+  </model>
+</PropertyList>

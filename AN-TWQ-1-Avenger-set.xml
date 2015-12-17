@@ -1,0 +1,564 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+
+ 
+  <sim>
+
+  
+    <description>AN/TWQ 1 Avenger</description>
+  
+    <author>Martien van der Plas, Alexis Bory (3d model)</author>
+  
+    <status>experimental</status>
+  
+    <aircraft-version>0.1</aircraft-version>
+
+  
+    <flight-model>jsb</flight-model>
+  
+    <aero>AN-TWQ-1-Avenger</aero>
+
+  
+    <presets>
+   
+      <onground>true</onground>
+  
+    </presets>
+
+  
+    <startup>
+   
+      <splash-texture>Aircraft/AN-TWQ-1-Avenger/AN-TWQ-1-Avenger-splash.jpg</splash-texture>
+  
+    </startup>
+ 
+    <sound>
+   
+      <path>Aircraft/AN-TWQ-1-Avenger/Sounds/Humvee-sound.xml</path>
+  
+    </sound>       
+   
+    <model>
+   
+      <path>Aircraft/AN-TWQ-1-Avenger/Models/AN-TWQ-1-Avenger.xml</path>
+
+        <livery>
+         <file type="string">default</file>
+        </livery>
+    </model>
+
+ 
+    <submodels>
+   
+      <serviceable type="bool">true</serviceable>
+
+      <path>Aircraft/AN-TWQ-1-Avenger/Models/Avenger-guns/AN-TWQ-1-Avenger-submodels.xml</path>
+ 
+    </submodels>
+    <hud>
+    <path n="1">Aircraft/AN-TWQ-1-Avenger/Hud/Avenger.xml</path>
+    <visibility n="1">false</visibility>
+    <palette>
+     <color n="0">
+      <alpha type="float">1</alpha>
+      <antialiased type="bool">true</antialiased>
+      <brightness type="float">1</brightness>
+      <transparent type="bool">true</transparent>
+      <red type="float">0.38</red><green type="float">1.0</green>
+      <blue type="float">0.22</blue>
+     </color>
+     <color n="1">
+      <alpha type="float">1</alpha>
+      <antialiased type="bool">true</antialiased>
+      <brightness type="float">1</brightness>
+      <transparent type="bool">true</transparent>
+      <red type="float">1.0</red>
+      <green type="float">0.2</green>
+      <blue type="float">0.0</blue>
+     </color>
+    </palette>
+    <clipping>
+     <left type="double">-80</left>
+     <right type="double">80</right>
+     <top type="double">30</top>
+     <bottom type="double">-130</bottom>
+    </clipping>
+    </hud>    
+    <multiplay>
+     <chat_display>1</chat_display>
+     <generic>
+      <int type="int" n="0"> 0 </int>
+      <!-- 0 immat -->
+      <int type="int" n="1"> 0 </int>
+      <!-- 1 immat -->
+      <int type="int" n="2"> 0 </int>
+      <!-- 2 immat -->
+      <int type="int" n="3"> 0 </int>
+      <!-- 3 immat -->
+      <int type="int" n="4"> 0 </int>
+      <!-- 4 immat -->
+      <int type="int" n="5"> 0 </int>
+      <!-- 5 immat -->
+      <int type="bool" n="6" alias="/smoke/active"> 0 </int>
+      <!-- 6 start smoke -->
+      <int type="int" n="7" alias="smoke/particlepersec"> 50 </int>
+      <!-- 7 particlepersec -->
+      <int type="int" n="10" alias="controls/armament/trigger">0</int>
+      <!-- 10 reserved for bombable mode -->
+      <float n="0" alias="/instrumentation/doors/crew/position-norm"/><float n="1" alias="/instrumentation/doors/passenger/position-norm"/><float n="2" alias="/position/gear-agl-m"> 0 </float>
+      <!-- altitude for MP shadow -->
+      <float n="3" alias="/smoke/colors/knob-red">1</float>
+      <!-- 3 smoke mixer red setting -->
+      <float n="4" alias="/smoke/colors/knob-green">1</float>
+      <!-- 4 smoke mixer green setting -->
+      <float n="5" alias="/smoke/colors/knob-blue">1</float>
+      <!-- 5 smoke mixer blue setting -->
+      <string type="string" n="9"/>
+      <!-- string[9] reserved for bombable mode -->
+     </generic>
+    </multiplay> 
+
+    <menubar>
+    <default>
+     <menu n="10">
+     <label>An/TWQ-1 Avenger</label>
+     <enabled type="bool">true</enabled>
+     <item>
+      <label>Select Livery</label>
+      <binding>
+       <command>nasal</command>
+       <script>aircraft.livery.dialog.open()</script>
+      </binding>
+     </item>
+     </menu>
+    </default>
+    </menubar>
+    <systems>
+
+   
+      <electrical>
+    
+        <path/>
+   
+      </electrical>
+
+   
+      <static>
+   
+      </static>
+
+  
+    </systems>
+  
+    <instrumentation>
+   
+      <gsdi>
+       <serviceable type="bool">true</serviceable>
+       <enabled type="bool">true</enabled>
+      </gsdi>
+    </instrumentation>
+
+  
+    <view n="0">
+   <internal archive="y">true</internal>
+   
+      <config>
+    
+        <!-- x/y/z == right/up/back -->
+    
+        <x-offset-m archive="y">-0.7</x-offset-m>
+    
+        <y-offset-m archive="y"> 1.9</y-offset-m>
+    
+        <z-offset-m archive="y">-0.0</z-offset-m>
+    
+        <pitch-offset-deg>-5</pitch-offset-deg>
+    
+        <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
+   
+      </config>
+  
+    </view>
+
+
+    <view n="500">
+     <name>Gunner</name>
+     <type>LookAt</type>
+     <internal archive="y">true</internal>
+     <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <eye-pitch-deg-path>/controls/flight/elevator</eye-pitch-deg-path>
+      <eye-heading-deg-path>/controls/flight/rudder</eye-heading-deg-path>
+      <default-field-of-view-deg type="double">55</default-field-of-view-deg>
+      <!-- parallel to the panel -->
+      <x-offset-m archive="y"> 0.00 </x-offset-m>
+      <!-- Left/Right -->
+      <y-offset-m archive="y"> 2.65 </y-offset-m>
+      <!-- Up/Down -->
+      <z-offset-m archive="y"> 1.90 </z-offset-m>
+      <!-- Fdw/Back -->
+     </config>
+    </view>  
+    <chase-distance-m type="double" archive="y">-15.0</chase-distance-m>
+
+  
+    <multiplay>
+   
+      <generic>
+    
+        <!-- Beam trigger -->
+    
+        <int n="0" type="int">0</int>
+   
+      </generic>
+  
+    </multiplay>
+
+  
+    <help>
+   
+      <key>
+    
+        <name>b</name>
+    
+        <desc>Brakes.</desc>
+   
+      </key>
+   
+      <key>
+    
+        <name>Page Up/Page Down</name>
+    
+        <desc>Accelerator.</desc>
+   
+      </key>
+   
+      <key>
+    
+        <name>shift + R</name>
+    
+        <desc>Toggle reverse.</desc>
+  
+      </key>
+   
+      <key>
+   
+        <name>shift + B</name>
+    
+        <desc>Toggle parking brake.</desc>
+   
+      </key>
+      <key>
+   
+        <name>l</name>
+    
+        <desc>Toggle lights.</desc>
+   
+      </key>
+
+      <key>
+   
+        <name>Enter</name>
+    
+        <desc>Turn turret left.</desc>
+   
+      </key>
+      <key>
+   
+        <name>Insert</name>
+    
+        <desc>Turn turret right.</desc>
+   
+      </key>
+      <key>
+   
+        <name>Arrow up</name>
+    
+        <desc>Turn launcher up.</desc>
+   
+      </key>
+      <key>
+   
+        <name>Arrow down</name>
+    
+        <desc>Turn launcher down.</desc>
+   
+      </key>
+      <key>
+   
+        <name>Delete</name>
+    
+        <desc>Gun trigger.</desc>
+   
+      </key>
+      <key>
+   
+        <name>1</name>
+    
+        <desc>rocket trigger.</desc>
+   
+      </key>
+      <key>
+   
+        <name>2</name>
+    
+        <desc>rocket trigger.</desc>
+   
+      </key>
+      <key>
+   
+        <name>3</name>
+    
+        <desc>rocket trigger.</desc>
+   
+      </key>
+      <key>
+   
+        <name>4</name>
+    
+        <desc>rocket trigger.</desc>
+   
+      </key>
+      <key>
+   
+        <name>5</name>
+    
+        <desc>rocket trigger.</desc>
+   
+      </key> 
+      <key>
+   
+        <name>6</name>
+    
+        <desc>rocket trigger.</desc>
+   
+      </key>
+      <key>
+   
+        <name>7</name>
+    
+        <desc>rocket trigger.</desc>
+   
+      </key>
+      <key>
+   
+        <name>8</name>
+    
+        <desc>rocket trigger.</desc>
+   
+      </key>
+      <text>(--T!ps--) You can also use the joystick modus from your mouse to turn the launcher up/down. With the joystick modus you can also turn the turret around by clicking on your mouse and drag it. Don't fire rocket's while you're driving (you will destroy your vehicle).</text>    
+
+    </help>
+
+ 
+    </sim>
+
+ 
+    <input>
+  
+      <keyboard>
+
+         <key n="108">
+          <name>l</name>
+          <desc>headlights</desc>
+          <binding>
+           <command>property-toggle</command>
+           <property>controls/switches/landing-light</property>
+          </binding>
+         </key>
+         <key n="82">
+   
+         <name>R</name>
+    
+         <desc>Toggle reverse gear.</desc>
+    
+         <binding>
+     
+           <command>nasal</command>
+     
+           <script>
+      var dir = "/fdm/jsbsim/propulsion/engine/yaw-angle-rad";
+      setprop(dir, (getprop(dir) == 0) ? 3.14159265 : 0.0);
+     </script>
+   
+         </binding>
+   
+         </key>
+   
+
+         <key n="127">
+          <name>Delete </name>
+          <desc>Gun Trigger</desc>
+          <binding>
+           <command>property-assign</command>
+           <property>controls/armament/trigger</property>
+           <value>true</value>
+          </binding>
+          <mod-up>
+           <binding>
+            <command>property-assign</command>
+            <property>controls/armament/trigger</property>
+            <value>false</value>
+           </binding>
+          </mod-up>
+         </key>
+         <key n="91">
+          <name>[</name>
+          <desc>portside rocket Trigger</desc>
+          <binding>
+           <command>property-assign</command>
+           <property>controls/armament/trigger1</property>
+           <value>true</value></binding>
+           <mod-up>
+            <binding>
+             <command>property-assign</command>
+             <property>controls/armament/trigger1</property>
+             <value>false</value>
+            </binding>
+           </mod-up>
+          </key>
+          <key n="93">
+           <name>]</name>
+           <desc>starboard rocket Trigger</desc>
+           <binding>
+            <command>property-assign</command>
+            <property>controls/armament/trigger2</property>
+            <value>true</value>
+           </binding>
+           <mod-up>
+            <binding>
+             <command>property-assign</command>
+             <property>controls/armament/trigger2</property>
+             <value>false</value>
+            </binding>
+           </mod-up>
+          </key>
+          <key n="56">
+           <name>8</name>
+           <desc>A-10 LAU-68 Rocket</desc>
+           <binding>
+            <command>nasal</command>
+            <script>setprop("/controls/armament/trigger4", 1)</script>
+           </binding>
+           <mod-up>
+            <binding>
+             <command>nasal</command>
+             <script>setprop("/controls/armament/trigger4", 0)</script>
+            </binding>
+           </mod-up>
+          </key>
+          <key n="55">
+           <name>7</name>
+           <desc>A-10 LAU-68 Rocket</desc>
+           <binding>
+            <command>nasal</command>
+            <script>setprop("/controls/armament/trigger4", 1)</script>
+           </binding>
+           <mod-up>
+            <binding>
+             <command>nasal</command>
+             <script>setprop("/controls/armament/trigger4", 0)</script>
+            </binding>
+           </mod-up>
+          </key>
+          <key n="54">
+           <name>6</name>
+           <desc>A-10 LAU-68 Rocket</desc>
+           <binding>
+            <command>nasal</command>
+            <script>setprop("/controls/armament/trigger4", 1)</script>
+           </binding>
+           <mod-up>
+            <binding>
+             <command>nasal</command>
+             <script>setprop("/controls/armament/trigger4", 0)</script>
+            </binding>
+           </mod-up>
+          </key>
+          <key n="53">
+           <name>5</name>
+           <desc>A-10 LAU-68 Rocket</desc>
+           <binding>
+            <command>nasal</command>
+            <script>setprop("/controls/armament/trigger4", 1)</script>
+           </binding>
+           <mod-up>
+            <binding>
+             <command>nasal</command>
+             <script>setprop("/controls/armament/trigger4", 0)</script>
+            </binding>
+           </mod-up>
+          </key>
+          <key n="52">
+           <name>4</name>
+           <desc>A-10 LAU-68 Rocket</desc>
+           <binding>
+            <command>nasal</command>
+            <script>setprop("/controls/armament/trigger4", 1)</script>
+           </binding>
+           <mod-up>
+            <binding>
+             <command>nasal</command>
+             <script>setprop("/controls/armament/trigger4", 0)</script>
+            </binding>
+           </mod-up>
+          </key>
+          <key n="51">
+           <name>3</name>
+           <desc>A-10 LAU-68 Rocket</desc>
+           <binding>
+            <command>nasal</command>
+            <script>setprop("/controls/armament/trigger4", 1)</script>
+           </binding>
+           <mod-up>
+            <binding>
+             <command>nasal</command>
+             <script>setprop("/controls/armament/trigger4", 0)</script>
+            </binding>
+           </mod-up>
+          </key>
+          <key n="50">
+           <name>2</name>
+           <desc>A-10 LAU-68 Rocket</desc>
+           <binding>
+            <command>nasal</command>
+            <script>setprop("/controls/armament/trigger4", 1)</script>
+           </binding>
+           <mod-up>
+            <binding>
+             <command>nasal</command>
+             <script>setprop("/controls/armament/trigger4", 0)</script>
+            </binding>
+           </mod-up>
+          </key>
+          <key n="49">
+           <name>1</name>
+           <desc>A-10 LAU-68 Rocket</desc>
+           <binding>
+            <command>nasal</command>
+            <script>setprop("/controls/armament/trigger4", 1)</script>
+           </binding>
+           <mod-up>
+            <binding>
+             <command>nasal</command>
+             <script>setprop("/controls/armament/trigger4", 0)</script>
+            </binding>
+           </mod-up>
+          </key>  
+      </keyboard>
+
+      <nasal>
+       <guns>
+        <file>Aircraft/AN-TWQ-1-Avenger/Nasal/weapons.nas</file>
+        <file>Aircraft/AN-TWQ-1-Avenger/Nasal/liveries.nas</file>
+       </guns>
+      </nasal>
+    </input>
+
+
+</PropertyList>

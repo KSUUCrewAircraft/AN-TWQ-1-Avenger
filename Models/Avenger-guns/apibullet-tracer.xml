@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>apibullet-tracer.ac</path>
+
+ <animation> <type>rotate</type> <property>controls/flight/rudder</property> <factor>-360</factor> <center> <x-m>0.0</x-m> <y-m>0.0</y-m> <z-m>0.0</z-m> </center> <axis> <x1-m>0.9998</x1-m> <y1-m>0</y1-m> <z1-m>6.0231</z1-m> <x2-m>1.1375</x2-m> <y2-m>0</y2-m> <z2-m>-1.2899</z2-m> </axis> </animation> <animation> <type>rotate</type> <property>controls/flight/elevator</property> <factor>-70</factor> <center> <x-m>0.0</x-m> <y-m>0.0</y-m> <z-m>0.0</z-m> </center> <axis> <x>0.0</x> <y>-0.5</y> <z>0.0</z> </axis> </animation> <animation>
+    <type>dist-scale</type>
+    <name>30mm</name>
+    <object-name>trace</object-name>
+    <interpolation>
+      <entry><ind>    0 </ind><dep>  0.05 </dep></entry>
+      <entry><ind>   10 </ind><dep>  0.20 </dep></entry>
+      <entry><ind>  400 </ind><dep> 10.00 </dep></entry>
+      <entry><ind> 5000 </ind><dep>  0.00 </dep></entry>
+    </interpolation>
+  </animation>
+
+</PropertyList>
